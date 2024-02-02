@@ -8,19 +8,14 @@ import { ArcherTemplate, GolemTemplate, KnightTemplate, PikemanTemplate, RiderTe
 
 contract ChangeTemplateStaminaOnKill is Script {
   function run() external {
-    StoreSwitch.setStoreAddress(0x7203e7ADfDF38519e1ff4f8Da7DCdC969371f377);
+    StoreSwitch.setStoreAddress(0x0c4363B384fBa51ABcaAeBB9b0c26Fe44eCeEe43);
 
     // Load the private key from the `PRIVATE_KEY` environment variable (in .env)
     uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
 
     vm.startBroadcast(deployerPrivateKey);
 
-    ArcherTemplate();
-    GolemTemplate();
-    KnightTemplate();
     PikemanTemplate();
-    RiderTemplate();
-    SwordsmanTemplate();
 
     vm.stopBroadcast();
   }

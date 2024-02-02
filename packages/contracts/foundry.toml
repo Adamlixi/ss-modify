@@ -10,12 +10,19 @@ test = "test"
 out = "out"
 extra_output_files = ["abi", "evm.bytecode"]
 fs_permissions = [{ access = "read", path = "./" }]
+gas_limit = 60000000
 
 [profile.lattice-testnet]
 eth_rpc_url = "https://follower.testnet2-chain.linfra.xyz"
 
 [profile.redstone]
-eth_rpc_url = "https://894.quarry.linfra.xyz/"
+eth_rpc_url = "https://redstone-holesky-testnet.rpc.thirdweb.com/"
 
 [profile.redstone-holesky]
-eth_rpc_url = "https://rpc.holesky.redstone.xyz/"
+eth_rpc_url = "https://ethereum-holesky.publicnode.com"
+
+[profile.goerli]
+eth_rpc_url = "https://eth-goerli.g.alchemy.com/v2/xxxx/"
+
+[profile.sepolia]
+eth_rpc_url = "https://eth-sepolia.g.alchemy.com/v2/xxxx/"

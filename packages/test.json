@@ -1,0 +1,1 @@
+{"Combat":{"health":500000,"maxHealth":500000,"armor":20000,"strength":100000,"structureStrength":50000,"counterStrength":70},"StaminaOnKill":{"value":2500},"Movable":{"value":3000},"Tier":{"value":3},"UnitType":{"value":1},"Range":{"min":0,"max":1}}

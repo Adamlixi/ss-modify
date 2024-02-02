@@ -58,5 +58,39 @@ export const redstoneHolesky = {
   testnet: true,
 };
 
+export const sepolia = {
+  id: 11155111,
+  name: "sepolia net",
+  network: "sepolia net",
+  summary: {
+    location: "sepolia",
+  },
+  description: "sepolia",
+  nativeCurrency: {
+    decimals: 18,
+    name: "sepolia Ether",
+    symbol: "ETH",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://eth-sepolia.g.alchemy.com/v2/y9ieSgTb0NKlNOl6P6WxOo4Qmz94Xluz/"],
+      webSocket: ["wss://eth-sepolia.g.alchemy.com/v2/y9ieSgTb0NKlNOl6P6WxOo4Qmz94Xluz/"],
+    },
+    public: {
+      http: ["https://eth-sepolia.g.alchemy.com/v2/y9ieSgTb0NKlNOl6P6WxOo4Qmz94Xluz/"],
+      webSocket: ["wss://eth-sepolia.g.alchemy.com/v2/y9ieSgTb0NKlNOl6P6WxOo4Qmz94Xluz/"],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: "sepolia",
+      url: "https://sepolia.etherscan.io/",
+    },
+  },
+  // faucetUrl: "https://17001-faucet.quarry.linfra.xyz/trpc",
+  indexerUrl: "https://indexer.skystrife.xyz",
+  testnet: false,
+};
+
 // If you are deploying to chains other than anvil or Lattice testnet, add them here
-export const supportedChains: SkyStrifeChain[] = [mudFoundry, latticeTestnet, redstone, redstoneHolesky];
+export const supportedChains: SkyStrifeChain[] = [mudFoundry, latticeTestnet, redstone, redstoneHolesky, sepolia];

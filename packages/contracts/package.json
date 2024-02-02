@@ -15,11 +15,16 @@
     "gas-report": "GAS_REPORTER_ENABLED=true mud test --forgeOptions='-vvv' | gas-report --save gas-report.json --stdin",
     "dev": "pnpm run templategen && PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 pnpm mud dev-contracts",
     "deploy:dev": "PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 DEBUG=mud:* mud deploy",
+
+    "deploy:goerli": "PRIVATE_KEY=xxx DEBUG=mud:* mud deploy --profile=goerli",
+
+    "deploy:sepolia": "PRIVATE_KEY=xxxx DEBUG=mud:* mud deploy --profile=sepolia",
+
     "----- REDSTONE -----": "---------------------------",
-    "deploy:redstone": "DEBUG=mud:* mud deploy --profile=redstone",
+    "deploy:redstone": "PRIVATE_KEY=xxx DEBUG=mud:* mud deploy --profile=redstone",
     "faucet:redstone": "pnpm mud faucet --faucetUrl=https://faucet.redstone.linfra.xyz --address",
     "----- REDSTONE HOLESKY -----": "---------------------------",
-    "deploy:redstone-holesky": "DEBUG=mud:* mud deploy --profile=redstone-holesky",
+    "deploy:redstone-holesky": "PRIVATE_KEY=xxx DEBUG=mud:* mud deploy --profile=redstone-holesky",
     "----- TESTNET -----": "---------------------------",
     "deploy:testnet": "DEBUG=mud:* mud deploy --profile=lattice-testnet",
     "new-testnet-wallet": "./create_and_fund_testnet_wallet.sh",

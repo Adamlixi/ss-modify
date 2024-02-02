@@ -10,9 +10,9 @@ import { HeroInRotation, HeroInSeasonPassRotation } from "../src/codegen/index.s
 import { GolemTemplateId, DragonTemplateId, WizardTemplateId, GolemTemplate, DragonTemplate, WizardTemplate } from "../src/codegen/Templates.sol";
 
 contract CreateHeroes is Script {
-  function run(address worldAddress) external {
-    IWorld world = IWorld(worldAddress);
-    StoreSwitch.setStoreAddress(worldAddress);
+  function run() external {
+    IWorld world = IWorld(0xE3a6D6D5570f1d87D45036eAC17342FfE32d8F46);
+    StoreSwitch.setStoreAddress(0xE3a6D6D5570f1d87D45036eAC17342FfE32d8F46);
 
     uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
     vm.startBroadcast(deployerPrivateKey);
@@ -20,10 +20,6 @@ contract CreateHeroes is Script {
     GolemTemplate();
     DragonTemplate();
     WizardTemplate();
-
-    HeroInRotation.set(GolemTemplateId, true);
-    HeroInSeasonPassRotation.set(DragonTemplateId, true);
-    HeroInSeasonPassRotation.set(WizardTemplateId, true);
 
     vm.stopBroadcast();
   }
